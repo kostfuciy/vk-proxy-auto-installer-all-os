@@ -243,7 +243,7 @@ if [ ${#WG_CONFS[@]} -gt 0 ]; then
         echo "Пропускаем установку WireGuard..."
     fi
 else
-    curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
+    curl -O https://raw.githubusercontent.com/kostfuciy/wireguard-installer-all-os/refs/heads/main/wireguard-install-all-os.sh
     chmod +x wireguard-install.sh
     ./wireguard-install.sh
     shopt -s nullglob

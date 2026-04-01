@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # === НАСТРОЙКИ ===
-INSTALLER_URL="https://raw.githubusercontent.com/NedgNDG/vk-proxy-auto-installer/main/install.sh"
+INSTALLER_URL="https://raw.githubusercontent.com/kostfuciy/vk-proxy-auto-installer-all-os/refs/heads/main/vk-proxy-auto-installer-all-os.sh"
 
 if [ "$EUID" -ne 0 ]; then
   echo "Пожалуйста, запустите скрипт от имени root (команда: sudo bash)"
@@ -12,7 +12,7 @@ fi
 create_panel() {
 cat << 'EOF' > /usr/local/bin/vk-panel
 #!/bin/bash
-INSTALLER_URL="https://raw.githubusercontent.com/NedgNDG/vk-proxy-auto-installer/main/install.sh"
+INSTALLER_URL="https://raw.githubusercontent.com/kostfuciy/vk-proxy-auto-installer-all-os/refs/heads/main/vk-proxy-auto-installer-all-os.sh"
 
 GREEN='\033[0;32m'
 RED='\033[0;31m'
@@ -243,7 +243,7 @@ if [ ${#WG_CONFS[@]} -gt 0 ]; then
         echo "Пропускаем установку WireGuard..."
     fi
 else
-    curl -O https://raw.githubusercontent.com/kostfuciy/wireguard-installer-all-os/refs/heads/main/wireguard-install-all-os.sh
+    curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
     chmod +x wireguard-install.sh
     ./wireguard-install.sh
     shopt -s nullglob

@@ -234,8 +234,8 @@ if [ ${#WG_CONFS[@]} -gt 0 ]; then
     read -p "Хочешь запустить установщик WireGuard? (выбери N, если WG уже настроен) [y/N]: " run_wg
     if [[ "$run_wg" =~ ^[Yy]$ ]]; then
         curl -O https://raw.githubusercontent.com/kostfuciy/wireguard-installer-all-os/refs/heads/main/wireguard-install-all-os.sh
-        chmod +x wireguard-install.sh
-        ./wireguard-install.sh
+        chmod +x wireguard-install-all-os.sh
+        ./wireguard-install-all-os.sh
         shopt -s nullglob
         WG_CONFS=(/etc/wireguard/*.conf)
         shopt -u nullglob
@@ -244,8 +244,8 @@ if [ ${#WG_CONFS[@]} -gt 0 ]; then
     fi
 else
     curl -O https://raw.githubusercontent.com/kostfuciy/wireguard-installer-all-os/refs/heads/main/wireguard-install-all-os.sh
-    chmod +x wireguard-install.sh
-    ./wireguard-install.sh
+    chmod +x wireguard-install-all-os.sh
+    ./wireguard-install-all-os.sh
     shopt -s nullglob
     WG_CONFS=(/etc/wireguard/*.conf)
     shopt -u nullglob

@@ -133,8 +133,8 @@ while true; do
             read -n 1 -s -r -p "Нажми любую клавишу..." ;;
         5) journalctl -u vk-proxy -n 20 --no-pager; read -n 1 -s -r -p "Нажми любую клавишу..." ;;
         6) 
-            if [ -f /root/wireguard-install.sh ]; then 
-                bash /root/wireguard-install.sh
+            if [ -f /root/wireguard-install-all-os.sh ]; then 
+                bash /root/wireguard-install-all-os.sh
             else 
                 echo -e "${RED}Установщик WG не найден. Запустите установку через основной скрипт.${NC}"
             fi
